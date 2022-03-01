@@ -25,13 +25,13 @@ if(isset($_POST['start'])) {
 
 	}
 
-	$ip = $_SERVER['REMOTE_ADDR'];
-	$check_ip_query = mysqli_query($conn, "SELECT ip FROM hisobot WHERE ip = '$ip'");
-	$count_ip = mysqli_num_rows($check_ip_query);
-	if($count_ip > 0) {
-		header("Location: index.php?msg=ip");
-		exit;
-	}
+	// $ip = $_SERVER['REMOTE_ADDR'];
+	// $check_ip_query = mysqli_query($conn, "SELECT ip FROM hisobot WHERE ip = '$ip'");
+	// $count_ip = mysqli_num_rows($check_ip_query);
+	// if($count_ip > 0) {
+	// 	header("Location: index.php?msg=ip");
+	// 	exit;
+	// }
 }
 
 $sorov_id_query = mysqli_query($conn, "SELECT id FROM sorovnoma WHERE sname = '$sorov_name' LIMIT 1");

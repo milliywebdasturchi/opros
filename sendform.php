@@ -35,7 +35,7 @@ if (isset($_POST['send'])) {
 		}
 		$jvb_all = trim($arr_jvb, 'Array  / ');
 
-		$subject = trim(htmlspecialchars(htmlentities($_POST['subject'])));
+		$subject = htmlspecialchars(htmlentities($_POST['subject']));
 
 		$myip = $_SERVER['REMOTE_ADDR'];
 
@@ -80,7 +80,7 @@ if (isset($_POST['send'])) {
 		}
 		$jvb_all = trim($arr_jvb, 'Array  / ');
 
-		$subject = trim(htmlspecialchars(htmlentities($_POST['subject'])));
+		$subject = htmlspecialchars(htmlentities($_POST['subject']));
 
 		$myip = $_SERVER['REMOTE_ADDR'];
 
