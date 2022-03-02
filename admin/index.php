@@ -1,10 +1,10 @@
 <?php 
 include "./../db.php";
-$hisobot_query = mysqli_query($conn, "SELECT * FROM sorovnoma");
-
+$hisobot_query = mysqli_query($conn, "SELECT * FROM sorovnoma ORDER BY id DESC");
+date_default_timezone_set('Asia/Tashkent');
 ?>
 <!DOCTYPE html>
-<html>
+<html> 
 <head>
 	<meta charset="utf-8">
 	<title>So'rovnoma</title>
@@ -18,6 +18,7 @@ $hisobot_query = mysqli_query($conn, "SELECT * FROM sorovnoma");
 			<div class="col-sm-12 mb-3">
 				<h3 class="text-center">Сўровномалар</h3>
 				<p class="alert alert-info"><b>Эслатма:</b> Сўровномани якунламоқчи бўлсангиз <b>"ЯКУНЛАШ"</b> тугмасини босинг. Сўровномани қайта ўтказмоқчи бўлсангиз <b>"ҚАЙТА БОШЛАШ"</b> тугмасини босинг.</p>
+                <p class="text-right"><a href="add_sorov.php" class="btn btn-success btn-sm">Сўровнома яратиш</a></p>
 				<table class="table table-bordered">
                     <thead>
                         <tr>
@@ -34,7 +35,13 @@ $hisobot_query = mysqli_query($conn, "SELECT * FROM sorovnoma");
                             <td><?php echo $i; ?></td>
                             <td><?php echo $row_hisobot['sname']; ?></td>
                             <td><?php echo date('d.m.Y / H:i', $row_hisobot['startDate']); ?></td>
-                            <td><?php echo $row_hisobot['endDate']; ?></td>
+                            <td><?php 
+                                if($row_hisobot['endDate'] == null) {
+                                    echo "";
+                                } else {
+                                    echo date('d.m.Y / H:i', $row_hisobot['endDate']);
+                                } 
+                            ?></td>
                             <td>
                                 <?php if($row_hisobot['endDate'] === null) { ?>
                                     <a href="sorov_on_off.php?sorov_id=<?php echo $row_hisobot['id']; ?>" class="btn btn-danger btn-sm">Якунлаш</a>
