@@ -18,7 +18,7 @@ date_default_timezone_set('Asia/Tashkent');
 			<div class="col-sm-12 mb-3">
 				<h3 class="text-center">Сўровномалар</h3>
 				<p class="alert alert-info"><b>Эслатма:</b> Сўровномани якунламоқчи бўлсангиз <b>"ЯКУНЛАШ"</b> тугмасини босинг. Сўровномани қайта ўтказмоқчи бўлсангиз <b>"ҚАЙТА БОШЛАШ"</b> тугмасини босинг.</p>
-                <p class="text-right"><a href="add_sorov.php" class="btn btn-success btn-sm">Сўровнома яратиш</a></p>
+                <p class="text-right"><a href="add_sorov.php" class="btn btn-success btn-sm">Сўровнома яратиш</a> | <a href="add_savol.php" class="btn btn-success btn-sm">Савол қўшиш</a></p>
 				<table class="table table-bordered">
                     <thead>
                         <tr>
