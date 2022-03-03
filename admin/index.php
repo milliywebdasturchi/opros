@@ -18,7 +18,7 @@ date_default_timezone_set('Asia/Tashkent');
 			<div class="col-sm-12 mb-3">
 				<h3 class="text-center">Сўровномалар</h3>
 				<p class="alert alert-info"><b>Эслатма:</b> Сўровномани якунламоқчи бўлсангиз <b>"ЯКУНЛАШ"</b> тугмасини босинг. Сўровномани қайта ўтказмоқчи бўлсангиз <b>"ҚАЙТА БОШЛАШ"</b> тугмасини босинг.</p>
-                <p class="text-right"><a href="add_sorov.php" class="btn btn-success btn-sm">Сўровнома яратиш</a> | <a href="add_savol.php" class="btn btn-success btn-sm">Савол қўшиш</a></p>
+                <p class="text-right"><a href="add_sorov.php" class="btn btn-primary btn-sm">Сўровнома яратиш</a> | <a href="add_savol.php" class="btn btn-success btn-sm">Савол қўшиш</a> | <a href="hisobot.php" class="btn btn-info btn-sm">Хисобот олиш</a></p>
 				<table class="table table-bordered">
                     <thead>
                         <tr>
@@ -42,12 +42,14 @@ date_default_timezone_set('Asia/Tashkent');
                                     echo date('d.m.Y / H:i', $row_hisobot['endDate']);
                                 } 
                             ?></td>
-                            <td>
+                            <td width="25%">
                                 <?php if($row_hisobot['endDate'] === null) { ?>
-                                    <a href="sorov_on_off.php?sorov_id=<?php echo $row_hisobot['id']; ?>" class="btn btn-danger btn-sm">Якунлаш</a>
+                                    <a href="sorov_on_off.php?sorov_id=<?php echo $row_hisobot['id']; ?>" class="btn btn-warning btn-sm">Якунлаш</a>
                                 <?php } else { ?>
                                     <a href="sorov_on_off.php?sorov_id=<?php echo $row_hisobot['id']; ?>" class="btn btn-primary btn-sm">Қайта бошлаш</a>
                                 <?php } ?>
+                                <a href="edit_sorov.php?sorov_id=<?php echo $row_hisobot['id']; ?>" class="btn btn-info btn-sm">Тахрирлаш</a>
+                                <a href="delete_sorov.php?sorov_id=<?php echo $row_hisobot['id']; ?>" class="btn btn-danger btn-sm">Ўчириш</a>
                             </td>
                         </tr>
                         <?php } ?>

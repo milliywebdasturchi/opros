@@ -73,8 +73,9 @@ $s_query = mysqli_query($conn, "SELECT * FROM sorovnoma");
                     data:$('#add_savol').serialize(),  
                     success:function(data)  
                     {  
-                        alert(data);  
-                        $('#add_savol')[0].reset();  
+                        // alert(data);  
+                        // $('#add_savol')[0].reset();
+                        window.location.href = "index.php";
                     }  
                 });
             } else {

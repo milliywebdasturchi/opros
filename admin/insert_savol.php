@@ -19,7 +19,8 @@ if($num > 0) {
             $insertJavob = mysqli_query($conn, "INSERT INTO javoblar(`savol_id`,`javob`) VALUES ('$insertSavolId','".mysqli_real_escape_string($conn, $_POST['javob_name'][$i])."')");
         }
     }
-    echo "Savol muvaffaqiyatli qo'shildi. Yangi savol qo'shishingiz yoki bosh sahifaga qaytishingiz mumkin.";
+    header("Location: index.php");
+    exit;
 }
 
 ?>
