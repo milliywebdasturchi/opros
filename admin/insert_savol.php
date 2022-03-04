@@ -19,7 +19,7 @@ if($num > 0) {
             $insertJavob = mysqli_query($conn, "INSERT INTO javoblar(`savol_id`,`javob`) VALUES ('$insertSavolId','".mysqli_real_escape_string($conn, $_POST['javob_name'][$i])."')");
         }
     }
-    header("Location: index.php");
+    header("Location: index.php?insert=success");
     exit;
 }
 

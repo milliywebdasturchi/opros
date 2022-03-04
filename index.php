@@ -53,7 +53,7 @@ $s_query = mysqli_query($conn, "SELECT * FROM sorovnoma");
 							<?php 
 								while($s_row = mysqli_fetch_assoc($s_query)) {
 									if($s_row['endDate'] == null) {?>
-										<option value="<?php echo $s_row['sname']; ?>"><?php echo $s_row['sname']; ?></option>
+										<option value="<?php echo $s_row['id']; ?>"><?php echo $s_row['sname']; ?></option>
 									<?php } else {
 										echo "";
 									} 

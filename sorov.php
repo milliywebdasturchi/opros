@@ -8,12 +8,12 @@ if(isset($_POST['start'])) {
 	if($opros == 'anonym') {
 		
 		$viloyat_name = $_POST['viloyat'];
-		$sorov_name = $_POST['sorov'];
+		$sorov_id = $_POST['sorov'];
 
 	} else if($opros == 'verify') {
 		
 		$viloyat_name = $_POST['viloyat'];
-		$sorov_name = $_POST['sorov'];
+		$sorov_id = $_POST['sorov'];
 		$fullname = $_POST['fullname'];
 		$phone = $_POST['phone'];
 		$address = $_POST['address'];
@@ -33,10 +33,6 @@ if(isset($_POST['start'])) {
 	// 	exit;
 	// }
 }
-
-$sorov_id_query = mysqli_query($conn, "SELECT id FROM sorovnoma WHERE sname = '$sorov_name' LIMIT 1");
-$sorov_res = mysqli_fetch_assoc($sorov_id_query);
-$sorov_id = $sorov_res['id'];
 
 $savol_query = mysqli_query($conn, "SELECT * FROM savollar WHERE s_id = '$sorov_id'");
 
@@ -58,7 +54,7 @@ $savol_query = mysqli_query($conn, "SELECT * FROM savollar WHERE s_id = '$sorov_
 				<hr>
 				<form action="sendform.php" method="post">
 					<input type="hidden" name="opros" value="<?php echo $opros; ?>">
-					<input type="hidden" name="opros_name" value="<?php echo $sorov_name; ?>">
+					<input type="hidden" name="sorov_id" value="<?php echo $sorov_id; ?>">
 					<input type="hidden" name="viloyat_name" value="<?php echo $viloyat_name; ?>">
 					<input type="hidden" name="fullname" value="<?php echo $fullname; ?>">
 					<input type="hidden" name="phone" value="<?php echo $phone; ?>">

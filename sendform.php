@@ -8,21 +8,14 @@ if (isset($_POST['send'])) {
 
 	if($opros === 'anonym') {
 
-		$opros_name = $_POST['opros_name'];
+		$sorov_id = $_POST['sorov_id'];
 		$viloyat_name = $_POST['viloyat_name'];
 		$fullname = null;
 		$phone = null;
 		$address = null;
 
-		// select opros id 
-		$opros_query_id = mysqli_query($conn, "SELECT id FROM sorovnoma WHERE sname = '$opros_name' LIMIT 1");
-		$opros_res_id = mysqli_fetch_assoc($opros_query_id);
-		$opros_id = $opros_res_id['id'];
-
-		
-
 		// select savol id
-		$savol_query_id = mysqli_query($conn, "SELECT id FROM savollar WHERE s_id = '$opros_id'");
+		$savol_query_id = mysqli_query($conn, "SELECT id FROM savollar WHERE s_id = '$sorov_id'");
 		$arr_jvb = array();
 		while ($row_id = mysqli_fetch_assoc($savol_query_id)) {
 		 	// savol id 
@@ -42,7 +35,7 @@ if (isset($_POST['send'])) {
 		date_default_timezone_set('Asia/Tashkent');
 		$createDate = time();
 
-		$insert = mysqli_query($conn, "INSERT INTO hisobot(`ip`,`v_name`,`s_name`,`fullName`,`phoneNumber`,`address`,`answers`,`subject`,`createDate`) VALUES ('$myip','$viloyat_name','$opros_name',null,null,null,'$jvb_all','$subject','$createDate')");
+		$insert = mysqli_query($conn, "INSERT INTO hisobot(`ip`,`v_name`,`s_id`,`fullName`,`phoneNumber`,`address`,`answers`,`subject`,`createDate`) VALUES ('$myip','$viloyat_name','$sorov_id',null,null,null,'$jvb_all','$subject','$createDate')");
 		if($insert) {
 			header("Location: index.php?msg=success");
 			exit;
@@ -53,21 +46,14 @@ if (isset($_POST['send'])) {
 
 	} else if($opros === 'verify') {
 
-		$opros_name = $_POST['opros_name'];
+		$sorov_id = $_POST['sorov$sorov_id'];
 		$viloyat_name = $_POST['viloyat_name'];
 		$fullname = $_POST['fullname'];
 		$phone = $_POST['phone'];
 		$address = $_POST['address'];
 
-		// select opros id 
-		$opros_query_id = mysqli_query($conn, "SELECT id FROM sorovnoma WHERE sname = '$opros_name' LIMIT 1");
-		$opros_res_id = mysqli_fetch_assoc($opros_query_id);
-		$opros_id = $opros_res_id['id'];
-
-		
-
 		// select savol id
-		$savol_query_id = mysqli_query($conn, "SELECT id FROM savollar WHERE s_id = '$opros_id'");
+		$savol_query_id = mysqli_query($conn, "SELECT id FROM savollar WHERE s_id = '$sorov_id'");
 		$arr_jvb = array();
 		while ($row_id = mysqli_fetch_assoc($savol_query_id)) {
 		 	// savol id 
@@ -87,7 +73,7 @@ if (isset($_POST['send'])) {
 		date_default_timezone_set('Asia/Tashkent');
 		$createDate = time();
 
-		$insert = mysqli_query($conn, "INSERT INTO hisobot(`ip`,`v_name`,`s_name`,`fullName`,`phoneNumber`,`address`,`answers`,`subject`,`createDate`) VALUES ('$myip','$viloyat_name','$opros_name','$fullname','$phone','$address','$jvb_all','$subject','$createDate')");
+		$insert = mysqli_query($conn, "INSERT INTO hisobot(`ip`,`v_name`,`s_id`,`fullName`,`phoneNumber`,`address`,`answers`,`subject`,`createDate`) VALUES ('$myip','$viloyat_name','$sorov_id','$fullname','$phone','$address','$jvb_all','$subject','$createDate')");
 		if($insert) {
 			header("Location: index.php?msg=success");
 			exit;
