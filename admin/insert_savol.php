@@ -16,7 +16,7 @@ if($num > 0) {
     for ($i = 0; $i < $num; $i++) {
         if(trim($_POST["javob_name"][$i] != ''))  
         {  
-            $insertJavob = mysqli_query($conn, "INSERT INTO javoblar(`savol_id`,`javob`) VALUES ('$insertSavolId','".mysqli_real_escape_string($conn, $_POST['javob_name'][$i])."')");
+            $insertJavob = mysqli_query($conn, "INSERT INTO javoblar(`sorov_id`,`savol_id`,`javob`) VALUES ('$sorov_id','$insertSavolId','".mysqli_real_escape_string($conn, $_POST['javob_name'][$i])."')");
         }
     }
     header("Location: index.php?insert=success");

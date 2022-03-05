@@ -49,7 +49,7 @@ date_default_timezone_set('Asia/Tashkent');
                                     <a href="sorov_on_off.php?sorov_id=<?php echo $row_hisobot['id']; ?>" class="btn btn-primary btn-sm">Қайта бошлаш</a>
                                 <?php } ?>
                                 <a href="edit_sorov.php?sorov_id=<?php echo $row_hisobot['id']; ?>" class="btn btn-info btn-sm">Тахрирлаш</a>
-                                <a href="delete_sorov.php?sorov_id=<?php echo $row_hisobot['id']; ?>" class="btn btn-danger btn-sm">Ўчириш</a>
+                                
                             </td>
                         </tr>
                         <?php } ?>
