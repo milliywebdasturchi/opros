@@ -67,45 +67,56 @@ $savollar = mysqli_query($conn, "SELECT * FROM savollar WHERE s_id = '$sorov_id'
                     <button type="submit" name="send" class="btn btn-success">Hisobotni ko'rish</button>
                 </form>
                 <hr>
-				<h3 class="text-center">Hisobot natijasi</h3>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <td class="text-center" colspan="3">Savollar</td>
-                        </tr>
-                        <tr>
-                            <td class="text-center"><b>Javoblar</b></td>
-                            <td class="text-center"><b>Tanlaganlar soni</b></td>
-                            <td class="text-center"><b>Foizi</b></td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php 						
-                            while($row = mysqli_fetch_assoc($savollar)) {
-                                
-                                $savol_id = $row['id'];
+                <p class="text-right"><button type="button" class="btn btn-primary btn-sm" onclick="PrintDiv();">Chop etish</button></p>
+                <div id="divToPrint">
+				    <h3 class="text-center">Hisobot natijasi</h3>
+                    <table class="table table-bordered"> 
+                        <thead>
+                            <tr>
+                                <td class="text-center"><b>Javoblar</b></td>
+                                <td class="text-center"><b>Tanlaganlar soni</b></td>
+                                <td class="text-center"><b>Foizi</b></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                                $i = 0; 						
+                                while($row = mysqli_fetch_assoc($savollar)) {
+                                    $i++;
+                                    $savol_id = $row['id'];
 
-                                echo "<tr>";
-                                    echo "<td colspan=\"3\"><b>" . $row['savol'] . "</b></td>";
-                                echo "</tr>";
-                                
-                                $javob_query = mysqli_query($conn, "SELECT * FROM javoblar WHERE savol_id = '$savol_id'");
-                                
-                                while($javob_row = mysqli_fetch_assoc($javob_query)) {
                                     echo "<tr>";
-                                        echo "<td>" . $javob_row['javob'] . "</td>";
-                                        echo "<td class=\"text-center\">" . $javob_row['count'] . "</td>";
-                                        echo "<td class=\"text-center\">" . $javob_row['percent'] . "</td>";
+                                        echo "<td colspan=\"3\"><b>" . $i .". ". $row['savol'] . "</b></td>";
                                     echo "</tr>";
-                                }
-                            } 
-                        ?>
-                    </tbody>
-                </table>
+                                    
+                                    $javob_query = mysqli_query($conn, "SELECT * FROM javoblar WHERE savol_id = '$savol_id'");
+                                    
+                                    while($javob_row = mysqli_fetch_assoc($javob_query)) {
+                                        echo "<tr>";
+                                            echo "<td>" . $javob_row['javob'] . "</td>";
+                                            echo "<td class=\"text-center\">" . $javob_row['count'] . "</td>";
+                                            echo "<td class=\"text-center\">" . $javob_row['percent'] . " %</td>";
+                                        echo "</tr>";
+                                    }
+                                } 
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
 				<hr>
                 <a href="index.php" class="btn btn-primary btn-sm">Бош саҳифага қайтиш</a>
 			</div>		
 		</div>
 	</div>
+    <script type="text/javascript">     
+        function PrintDiv() {    
+            var divToPrint = document.getElementById('divToPrint');
+            var popupWin = window.open('', '_blank', 'width=980,height=760');
+            
+            popupWin.document.open();
+            popupWin.document.write('<html><link rel="stylesheet" href="./../css/bootstrap.min.css">' + divToPrint.innerHTML + '</html>');        
+            popupWin.document.close();
+        }
+    </script>
 </body>
 </html>
