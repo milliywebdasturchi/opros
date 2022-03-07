@@ -1,0 +1,35 @@
+Sizning fikringizcha faoliyat yuritayotgan xududingizda Farmasevtika tarmog‘ini rivojlantirish agentligi va uning hududiy bo‘linmalari faoliyatida korrupsion holatlar mavjudmi?
+Ha, mavjud
+Yo‘q, mavjud emas
+Javob berishga qiynalaman
+
+Hududingizda Farmasevtika tarmog‘i bo‘linmasidagi korrupsiya darajasini qanday baholagan bo‘lardingiz?
+Bunday holatlar mavjud emas
+Yuqori darajada
+Past darajada
+
+Farmasevtika tarmog‘i faoliyatida shaxsan o‘zingiz korrupsiya holatlariga duch kelganmisiz?
+Ha
+Yo‘q
+
+Farmasevtika tarmog‘i faoliyatida korrupsion holatning qanday ko‘rinishiga duch kelgansiz?
+Sovg‘a so‘rash (talab qilish), berish
+Pul mablag‘lari ko‘rinishida pora talab qilish
+Yordam evaziga turli xizmatlar talab qilish
+
+Farmasevtika tarmog‘i faoliyatida qaysi sohalarda korrupsion holatlar ko‘proq mavjud deb hisoblaysiz?
+Monitoring, tekshiruv, nazorat tadbirlari o‘tkazish davomida
+Maxsulotni ro‘yxatdan o‘tkazish jarayonida
+Faoliyatni lisenziyalash jarayonida
+Erkin iqtisodiy zonalarda yer ajratish jarayonida
+Mahsulotlarni sertifikatlashtirish davomida
+Faoliyatga oid zarur axborotlarni taqdim etish jarayonida
+
+Farmasevtika tarmog‘i faoliyatida so‘nggi 3 yilda korrupsiya darajasining o‘zgarishini qanday baholaysiz?
+Korrupsion holatlar kamaydi
+Korrupsion holatlar ko‘paydi
+Sohada korrupsiyaga chek qo‘yilgan
+
+Farmasevtika tarmog‘i faoliyatida korrupsiya faktlari yuzasidan habar berish uchun @Stop_corruptionbot telegram bot mavjudligini bilasizmi?
+Ha
+Yo‘q

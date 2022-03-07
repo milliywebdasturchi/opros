@@ -1,0 +1,35 @@
+In your opinion, are there any facts of corruption in the activities of the Agency for the Development of the Pharmaceutical Industry and its regional divisions in your region?
+Yes, there are
+No, not available
+I am at a loss to answer
+
+How would you rate the level of corruption of the Pharmaceutical Agency unit in your region?
+Such facts do not exist
+At a high level
+At a low level
+
+Have you personally encountered corruption in the pharmaceutical industry?
+Yes
+No
+
+What type of corruption have you encountered in the pharmaceutical industry?
+Requesting (demanding) gifts
+Demanding a bribe in the form of funds
+The requirement to provide various services in return for the assistance provided
+
+In your opinion, in what areas of the pharmaceutical industry is there a high level of corruption facts?
+In the process of monitoring, visits, inspections and control activities
+During the product registration process
+In the process of obtaining a license
+In the process of searching for a foreign partner
+In the process of certification, standardization of products, equipment
+In the process of providing information necessary for pharmaceutical activities
+
+How do you assess the changes in the level of corruption in the pharmaceutical industry over the past 3 years?
+Corruption facts have decreased
+Corruption facts have increased
+The industry is done with corruption
+
+Are you aware of the presence of the @Stop_corruptionbot telegram bot, which allows you to send information about corruption facts?
+Yes
+No
